@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiAssistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <!--Whole extension window-->
+    <div class="extension">
+        <!--Tab button / bar-->
+        <div class="tab">
+            <button class="tablinks" id="chat">Keskustelu</button>
+            <button class="tablinks" id="settings">Asetukset</button>
+            <button class="tablinks" id="information">Info</button>
+        </div>
+        
+        <!--Chatting tab-->
+        <div id="tab-chatting" class="tabcontent">
+          <div class="conversation" id="chatting">
+          </div>
+          <form action="#" class="text-input">
+              <input autocomplete="off" autofocus required class="message-box" type="text" id="message" placeholder="Kirjoita kysymyksesi">
+              <button class="button-send" id="send" type="submit">
+                <span class="material-symbols-outlined">
+                  send
+                </span>
+              </button>
+          </form>
+        </div>
+
+        <!--Settings tab-->
+        <div id="tab-settings" class="tabcontent">
+          <div class="options">
+            <br><br><br>
+            <h2>Teema</h2>
+            <p style="font-size: 1rem;">Valitse tumma tai vaalea teema</p>
+
+            <form>
+              <button class="button-send button-options" type="button" id="themeChange">Vaihda teema</button>
+            </form>
+            <br><br><br>
+            <h2>Hassutteluasetukset</h2>
+            <p style="font-size: 1rem;">Valitse rooli botille:</p>
+
+            <form action="#" id="characterForm" class="character-form">
+              <input autocomplete="off" autofocus type="text" id="rolename" placeholder="Kirjoita roolihahmo tähän">
+              <button class="button-send button-options" id="chooseRole" type="submit">Valitse rooli</button>
+              
+              <p style="font-size: 1rem;" id="chosenRole"></p>
+              <button class="button-send button-options remove-button red" id="removeRole" type="button">Poista rooli</button>
+            </form>
+            <button class="button-send button-options red" id="emptyChat" type="button" style="margin-top: 85px;">Tyhjennä keskustelu</button>
+          </div>
+        </div>
+          
+        <!--Information tab-->
+        <div id="tab-information" class="tabcontent">
+          <center>
+            <h1 style="padding-top: 5%;">Käyttöohjeet:</h1>
+            <p class="instructions" style="padding-top: 2%"";>
+              Keskustelu-välilehdellä voit keskustella botin kanssa 
+              kirjoittamalla alareunan kirjoituskenttään viestisi.
+              Viestin voit lähettää painamalla lähetyspainiketta tai Enter-näppäintä. <br><br>
+              Asetuksista voit muuttaa laajennuksen väriteemaa tummaksi tai vaaleaksi. <br>
+              Voit myös valita haluamasi roolin botille kirjoittamalla roolihahmon tai
+              käyttäytymistyylin tekstikenttään ja painamalla "Valitse rooli" -painiketta <br>
+              Halutessasi voit myös poistaa istunnon keskusteluhistorian painamalla "Tyhjennä keskustelu" -painiketta.
+            </p>
+            <h2 class="instructions" style="padding-top: 5%; color: red;"> HUOM! Älä kerro yksityisiä tai salassapidettäviä asioita keskustelubotille, koska keskustelut tallentuvat OpenAI:n palvelimille.</h2>
+            
+            <h3 class="instructions" style="color: red; padding-top: 2%;"> Tekijät eivät ota vastuuta käyttäjän lähettämistä syötteistä.</h3>
+            <h1 style="padding-top: 6%;">Topi Laakso & David Legart</h1>
+            <h2>2023</h2>
+          </center>
+        </div> 
+    </div>
+  <script src="app.js"></script>
+</body>
+</html>
